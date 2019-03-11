@@ -1,0 +1,951 @@
+{
+	"info": {
+		"_postman_id": "01861f3c-375b-472d-a01b-f578646e5c00",
+		"name": "XY Inc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Insert POI",
+			"item": [
+				{
+					"name": "Missing Parameter",
+					"item": [
+						{
+							"name": "Missing All Parameter",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/insert",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"insert"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Missing Name",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/insert?coordinateX=20&coordinateY=20",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"insert"
+									],
+									"query": [
+										{
+											"key": "coordinateX",
+											"value": "20"
+										},
+										{
+											"key": "coordinateY",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Missing Coordinate X",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/insert?name=Lanchonete&coordinateY=20",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"insert"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Lanchonete"
+										},
+										{
+											"key": "coordinateY",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Missing Coordinate Y",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/insert?name=Lanchonete&coordinateX=20",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"insert"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Lanchonete"
+										},
+										{
+											"key": "coordinateX",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Wrong Parameter Format",
+					"item": [
+						{
+							"name": "Wrong Coordinate X Format",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/insert?name=Lanchonete&coordinateX=abcde&coordinateY=20",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"insert"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Lanchonete"
+										},
+										{
+											"key": "coordinateX",
+											"value": "abcde"
+										},
+										{
+											"key": "coordinateY",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Wrong Coordinate Y Format",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/insert?name=Lanchonete&coordinateX=20&coordinateY=abcde",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"insert"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Lanchonete"
+										},
+										{
+											"key": "coordinateX",
+											"value": "20"
+										},
+										{
+											"key": "coordinateY",
+											"value": "abcde"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Wrong Negative Parameter",
+					"item": [
+						{
+							"name": "Wrong Negative Coordinate X",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/insert?name=Lanchonete&coordinateX=-10&coordinateY=20",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"insert"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Lanchonete"
+										},
+										{
+											"key": "coordinateX",
+											"value": "-10"
+										},
+										{
+											"key": "coordinateY",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Wrong Negative Coordinate Y",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/insert?name=Lanchonete&coordinateX=20&coordinateY=-10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"insert"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Lanchonete"
+										},
+										{
+											"key": "coordinateX",
+											"value": "20"
+										},
+										{
+											"key": "coordinateY",
+											"value": "-10"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Success Case",
+					"item": [
+						{
+							"name": "Insert POI",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/insert?name=Churrascaria&coordinateX=28&coordinateY=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"insert"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Churrascaria"
+										},
+										{
+											"key": "coordinateX",
+											"value": "28"
+										},
+										{
+											"key": "coordinateY",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "List All POIs",
+			"item": [
+				{
+					"name": "List All POIs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/xy_inc/pointOfInterest/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"xy_inc",
+								"pointOfInterest",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "List POIs by Proximity",
+			"item": [
+				{
+					"name": "Missing Parameter",
+					"item": [
+						{
+							"name": "Missing All Parameter",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/maxDistance",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"maxDistance"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Missing Coordinate X",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/maxDistance?coordinateY=20&distance=10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"maxDistance"
+									],
+									"query": [
+										{
+											"key": "coordinateY",
+											"value": "20"
+										},
+										{
+											"key": "distance",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Missing Coordinate Y",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/maxDistance?coordinateX=20&distance=10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"maxDistance"
+									],
+									"query": [
+										{
+											"key": "coordinateX",
+											"value": "20"
+										},
+										{
+											"key": "distance",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Missing Distance",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/maxDistance?coordinateX=20&coordinateY=20",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"maxDistance"
+									],
+									"query": [
+										{
+											"key": "coordinateX",
+											"value": "20"
+										},
+										{
+											"key": "coordinateY",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Wrong Parameter Format",
+					"item": [
+						{
+							"name": "Wrong Coordinate X Format",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/maxDistance?coordinateX=abcde&coordinateY=20&distance=10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"maxDistance"
+									],
+									"query": [
+										{
+											"key": "coordinateX",
+											"value": "abcde"
+										},
+										{
+											"key": "coordinateY",
+											"value": "20"
+										},
+										{
+											"key": "distance",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Wrong Coordinate Y Format",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/maxDistance?coordinateX=20&coordinateY=abcde&distance=10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"maxDistance"
+									],
+									"query": [
+										{
+											"key": "coordinateX",
+											"value": "20"
+										},
+										{
+											"key": "coordinateY",
+											"value": "abcde"
+										},
+										{
+											"key": "distance",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Wrong Distance Format",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/maxDistance?coordinateX=20&coordinateY=20&distance=abcde",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"maxDistance"
+									],
+									"query": [
+										{
+											"key": "coordinateX",
+											"value": "20"
+										},
+										{
+											"key": "coordinateY",
+											"value": "20"
+										},
+										{
+											"key": "distance",
+											"value": "abcde"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Wrong Negative Parameter",
+					"item": [
+						{
+							"name": "Wrong Negative Coordinate X",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/maxDistance?coordinateX=-10&coordinateY=20&distance=10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"maxDistance"
+									],
+									"query": [
+										{
+											"key": "coordinateX",
+											"value": "-10"
+										},
+										{
+											"key": "coordinateY",
+											"value": "20"
+										},
+										{
+											"key": "distance",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Wrong Negative Coordinate Y",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/maxDistance?coordinateX=20&coordinateY=-10&distance=10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"maxDistance"
+									],
+									"query": [
+										{
+											"key": "coordinateX",
+											"value": "20"
+										},
+										{
+											"key": "coordinateY",
+											"value": "-10"
+										},
+										{
+											"key": "distance",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Wrong Negative Distance",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/maxDistance?coordinateX=20&coordinateY=20&distance=-10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"maxDistance"
+									],
+									"query": [
+										{
+											"key": "coordinateX",
+											"value": "20"
+										},
+										{
+											"key": "coordinateY",
+											"value": "20"
+										},
+										{
+											"key": "distance",
+											"value": "-10"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Success Case",
+					"item": [
+						{
+							"name": "List POIs by Proximity",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/xy_inc/pointOfInterest/maxDistance?coordinateX=20&coordinateY=10&distance=10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"xy_inc",
+										"pointOfInterest",
+										"maxDistance"
+									],
+									"query": [
+										{
+											"key": "coordinateX",
+											"value": "20"
+										},
+										{
+											"key": "coordinateY",
+											"value": "10"
+										},
+										{
+											"key": "distance",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}
